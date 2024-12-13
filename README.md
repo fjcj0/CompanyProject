@@ -1,1 +1,1 @@
-<h1 class="text-danger">Company Project</h1>
+<h1 style="color:crimson;">Company Project</h1>
