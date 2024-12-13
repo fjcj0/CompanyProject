@@ -38,6 +38,7 @@ $exports_result = $conn->query($exports_stmt);
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="https://lottie.host/ec4359c4-5efb-4283-8d11-d09784ddbd48/L7aADkVCV8.lottie">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=TqMH12qThZd9&format=png&color=000000">
     <style>
         /*
                         1- font-family: "Scheherazade New", serif;
