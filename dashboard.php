@@ -148,7 +148,6 @@ $percent_total_quantity_export = $total_quantity_export * 0.01;
             width: calc(100% - 290px);
             left: 0;
         }
-
         .silder-nav {
             height: 95%;
             position: fixed;
@@ -195,7 +194,7 @@ $percent_total_quantity_export = $total_quantity_export * 0.01;
 
         @media only screen and (max-width: 881px) {
             .silder-nav {
-                transform: translateX(19rem);
+                transform: translateX(23rem);
             }
 
             .content-slot-dashboard {
@@ -459,7 +458,7 @@ $percent_total_quantity_export = $total_quantity_export * 0.01;
             <div class="product-buy container-sm mt-3 rounded-3 section" id="product-buy">
                 <h1>البضائع المستوردة</h1>
                 <!--INPUT FORM GOODS-->
-                <form method="POST" action="<?php echo htmlspecialchars('/company/controllers/GoodsControllers/importgoods.php') ?>" class="row g-3" enctype="multipart/form-data">
+                <form method="POST" action="<?php echo htmlspecialchars('/company/controllers/GoodsControllers/importgoods.php') ?>" class="row g-3 my-2" enctype="multipart/form-data">
                     <div class="col-md-6">
                         <label for="name" class="form-label">الاسم</label>
                         <input type="text" name="name" class="form-control" required>
@@ -494,13 +493,13 @@ $percent_total_quantity_export = $total_quantity_export * 0.01;
             <div class="exported-goods container-sm mt-3 section" id="exported-goods">
                 <h1>بضائع مصدرة الى الافرع</h1>
                 <div class="buttons-exported-goods mt-3">
-                    <button type="button" class="btn btn-info display-goods-button text-white" id="display-goods-button">عرض البضائع المتاحة في المستودع الرئيسي <i
+                    <button type="button" class="btn btn-info display-goods-button text-white my-2" id="display-goods-button">عرض البضائع المتاحة في المستودع الرئيسي <i
                             class="fa fa-caret-down" aria-hidden="true"></i>
                     </button>
-                    <button type="button" class="btn btn-dark display-branches-button text-white" id="display-branches-button">مكان التوزيع <i class="fa fa-caret-down"
+                    <button type="button" class="btn btn-dark display-branches-button text-white my-2" id="display-branches-button">مكان التوزيع <i class="fa fa-caret-down"
                             aria-hidden="true"></i>
                     </button>
-                    <a href="/company/navigationsexports/exports/exports.php" class="btn btn-warning text-white">التصديرات</a>
+                    <a href="/company/navigationsexports/exports/exports.php" class="btn btn-warning text-white my-2">التصديرات</a>
                 </div>
                 <div class="goods mt-5" id="goods-in-store">
                     <hr>
@@ -723,7 +722,7 @@ $percent_total_quantity_export = $total_quantity_export * 0.01;
                     <button type="submit" class="btn btn-dark btn-md px-4 py-2 mt-2">تحديث</button>
                 </form>
                 <hr>
-                <div class="interface-settings">
+                <div class="interface-settings my-2">
                     <h1>إعدادات الواجهة</h1>
                     <div class="row">
                         <select name="language" id="language" class="form-select p-3 mx-2 text-start"
@@ -936,7 +935,7 @@ $percent_total_quantity_export = $total_quantity_export * 0.01;
                 document.getElementById('silder-nav').style.transform = 'translateX(0rem)';
                 flagnav = false;
             } else {
-                document.getElementById('silder-nav').style.transform = 'translateX(19rem)';
+                document.getElementById('silder-nav').style.transform = 'translateX(23rem)';
                 flagnav = true;
             }
         });
