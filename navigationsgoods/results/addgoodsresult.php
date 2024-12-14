@@ -57,7 +57,7 @@
     <?php
     if($_REQUEST['success']){
     echo '<h1 class="text-success" id="result"><span class="spinner-grow text-success"></span> تمت العملية بنجاح</h1>
-    <form action="" class="row g-3 mx-3">
+    <form action="/company/controllers/GoodsControllers/importgoods.php" method="POST" class="row g-3 mx-3" enctype="multipart/form-data">
         <div class="col-md-6">
             <label for="name" class="form-label">الاسم</label>
             <input type="text" name="name" class="form-control">
@@ -68,7 +68,7 @@
         </div>
         <div class="col-12">
             <label for="price" class="form-label">السعر</label>
-            <input type="number" name="price" class="form-control">
+            <input type="number" name="price" class="form-control"  step="0.01">
         </div>
         <div class="col-12">
             <label for="place" class="form-label">المكان</label>
