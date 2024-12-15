@@ -638,7 +638,7 @@ $percent_total_quantity_export = $total_quantity_export * 0.01;
                         <div class="card h-100 text-center shadow <?php echo ($_SESSION['mode'] == 'dark') ? 'bg-dark text-white' : 'bg-light text-dark'; ?>">
                             <div class="card-body">
                                 <div class="display-4 <?php echo ($_SESSION['mode'] == 'dark') ? 'text-danger' : 'text-danger'; ?> mb-2">
-                                    <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                                    <i class="fa fa-credit-card-alt text-primary" aria-hidden="true"></i>
                                 </div>
                                 <h2 class="card-title mb-3"><?php echo $percent_disadvantage; ?>%</h2>
                                 <p class="card-text">نسبة الخسائر</p>
