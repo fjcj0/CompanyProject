@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 session_start();
 if (!$_SESSION['token']) {
@@ -414,6 +413,7 @@ if ($_SESSION['language'] == 'en') {
         html [dir="ltr"] .silder-nav button img {
             margin-right: 0.5rem;
         }
+
         .button-slider {
             display: none;
         }
@@ -1039,49 +1039,49 @@ if ($_SESSION['language'] == 'en') {
                             <img src="<?php echo '../' . $row_four_goods['image']; ?>" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title"> <?php
-                        if ($_SESSION['language'] == 'en') {
-                            echo $en['CARD_GOOD_NAME'];
-                        } else {
-                            echo $ar['SHOW_GOOD_INFO'];
-                        }
-                        ?> <?php echo $row_four_goods['name']; ?></h5>
+                                                        if ($_SESSION['language'] == 'en') {
+                                                            echo $en['CARD_GOOD_NAME'];
+                                                        } else {
+                                                            echo $ar['SHOW_GOOD_INFO'];
+                                                        }
+                                                        ?> <?php echo $row_four_goods['name']; ?></h5>
                                 <p class="card-text"><?php
-                        if ($_SESSION['language'] == 'en') {
-                            echo $en['CARD_GOOD_LOCATION'];
-                        } else {
-                            echo $ar['CARD_GOOD_LOCATION'];
-                        }
-                        ?> <?php echo $row_four_goods['place']; ?></p>
+                                                        if ($_SESSION['language'] == 'en') {
+                                                            echo $en['CARD_GOOD_LOCATION'];
+                                                        } else {
+                                                            echo $ar['CARD_GOOD_LOCATION'];
+                                                        }
+                                                        ?> <?php echo $row_four_goods['place']; ?></p>
                                 <p class="card-text"><?php
-                        if ($_SESSION['language'] == 'en') {
-                            echo $en['CARD_GOOD_PRICE'];
-                        } else {
-                            echo $ar['CARD_GOOD_PRICE'];
-                        }
-                        ?> $<?php echo $row_four_goods['price']; ?></p>
+                                                        if ($_SESSION['language'] == 'en') {
+                                                            echo $en['CARD_GOOD_PRICE'];
+                                                        } else {
+                                                            echo $ar['CARD_GOOD_PRICE'];
+                                                        }
+                                                        ?> $<?php echo $row_four_goods['price']; ?></p>
                                 <p class="card-text"><?php
-                        if ($_SESSION['language'] == 'en') {
-                            echo $en['CARD_GOOD_QUANTITY'];
-                        } else {
-                            echo $ar['CARD_GOOD_QUANTITY'];
-                        }
-                        ?> <?php echo $row_four_goods['quantity']; ?></p>
+                                                        if ($_SESSION['language'] == 'en') {
+                                                            echo $en['CARD_GOOD_QUANTITY'];
+                                                        } else {
+                                                            echo $ar['CARD_GOOD_QUANTITY'];
+                                                        }
+                                                        ?> <?php echo $row_four_goods['quantity']; ?></p>
                                 <p class="card-text"><?php
-                        if ($_SESSION['language'] == 'en') {
-                            echo $en['CARD_GOOD_EXPORTER'];
-                        } else {
-                            echo $ar['CARD_GOOD_EXPORTER'];
-                        }
-                        ?> <?php echo $row_four_goods['exporter']; ?></p>
+                                                        if ($_SESSION['language'] == 'en') {
+                                                            echo $en['CARD_GOOD_EXPORTER'];
+                                                        } else {
+                                                            echo $ar['CARD_GOOD_EXPORTER'];
+                                                        }
+                                                        ?> <?php echo $row_four_goods['exporter']; ?></p>
                                 <a href="<?php echo htmlspecialchars("/company/navigationsgoods/Informationgood/informationgood.php?good_id=" . $row_four_goods['id']); ?>"
                                     class="btn btn-primary">
                                     <?php
-                        if ($_SESSION['language'] == 'en') {
-                            echo $en['SHOW_GOOD_INFO'];
-                        } else {
-                            echo $ar['SHOW_GOOD_INFO'];
-                        }
-                        ?>
+                                    if ($_SESSION['language'] == 'en') {
+                                        echo $en['SHOW_GOOD_INFO'];
+                                    } else {
+                                        echo $ar['SHOW_GOOD_INFO'];
+                                    }
+                                    ?>
                                 </a>
                             </div>
                         </div>
@@ -1115,28 +1115,28 @@ if ($_SESSION['language'] == 'en') {
                         <div class="card" style="width: 18rem;">
                             <img src="<?php echo '../' . $row_four_branches['image']; ?>" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title">    <?php
-                        if ($_SESSION['language'] == 'en') {
-                            echo $en['CARD_BRANCH_NAME'];
-                        } else {
-                            echo $ar['CARD_BRANCH_NAME'];
-                        }
-                        ?> <?php echo $row_four_branches['name']; ?></h5>
+                                <h5 class="card-title"> <?php
+                                                        if ($_SESSION['language'] == 'en') {
+                                                            echo $en['CARD_BRANCH_NAME'];
+                                                        } else {
+                                                            echo $ar['CARD_BRANCH_NAME'];
+                                                        }
+                                                        ?> <?php echo $row_four_branches['name']; ?></h5>
                                 <p class="card-text"><?php
-                        if ($_SESSION['language'] == 'en') {
-                            echo $en['CARD_BRANCH_LOCATION'];
-                        } else {
-                            echo $ar['CARD_BRANCH_LOCATION'];
-                        }
-                        ?>
-                        <?php echo $row_four_branches['place']; ?></p>
-                                <a href="<?php echo htmlspecialchars("/company/navigationsgoods/deliver/deliver.php?branch_id=" . $row_four_branches['id']) ?>" class="btn btn-primary">          <?php
-                        if ($_SESSION['language'] == 'en') {
-                            echo $en['SEND_GODD'];
-                        } else {
-                            echo $ar['SEND_GODD'];
-                        }
-                        ?></a>
+                                                        if ($_SESSION['language'] == 'en') {
+                                                            echo $en['CARD_BRANCH_LOCATION'];
+                                                        } else {
+                                                            echo $ar['CARD_BRANCH_LOCATION'];
+                                                        }
+                                                        ?>
+                                    <?php echo $row_four_branches['place']; ?></p>
+                                <a href="<?php echo htmlspecialchars("/company/navigationsgoods/deliver/deliver.php?branch_id=" . $row_four_branches['id']) ?>" class="btn btn-primary"> <?php
+                                                                                                                                                                                            if ($_SESSION['language'] == 'en') {
+                                                                                                                                                                                                echo $en['SEND_GODD'];
+                                                                                                                                                                                            } else {
+                                                                                                                                                                                                echo $ar['SEND_GODD'];
+                                                                                                                                                                                            }
+                                                                                                                                                                                            ?></a>
                             </div>
                         </div>
                     <?php endwhile; ?>
@@ -1440,7 +1440,11 @@ if ($_SESSION['language'] == 'en') {
                                     echo "<td>" . htmlspecialchars($rowexport['created_at']) . "</td>";
                                     echo "</tr>";
                                 }
-                                echo "<tfoot><tr><td colspan='6'>الربح: " . $advantage['advantage'] . "$" . "</td></tr></tfoot>";
+                                if ($_SESSION['language'] == 'en') {
+                                    echo "<tfoot><tr><td colspan='6'>advantage: " . $advantage['advantage'] . "$" . "</td></tr></tfoot>";
+                                } else {
+                                    echo "<tfoot><tr><td colspan='6'>الربح: " . $advantage['advantage'] . "$" . "</td></tr></tfoot>";
+                                }
                             } else {
                                 if ($_SESSION['language'] == 'en') {
                                     echo "<tr><td colspan='6'>" . $en['NO_DATA'] . "</td></tr>";
