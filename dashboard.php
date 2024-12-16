@@ -86,7 +86,7 @@ $languages = [
         "DASHBOARD" => "DASHBOARD",
         "HOME" => "HOME",
         "IMPORTED_GOODS" => "IMPORTED GOODS",
-        "EXPORTED_GOODS" => "EXPORTED GOODS TO BRACNHES",
+        "EXPORTED_GOODS" => "EXPORTED GOODS",
         "BRANCHES" => "BRANCHES",
         "PROBALITY" => "PROBALITY",
         "SETTINGS" => "SETTINGS",
@@ -144,7 +144,7 @@ $languages = [
         "ARABIC" => "arabic",
         "ENGLISH" => "english",
         "INPUT_INTERFACE_BUTTON_SAVE" => "SAVE",
-        "INPUT_INTERFACE_MODE" => "CHOOSE MODE",
+        "INPUT_INTERFACE_MODE" => "choose mode",
         "LIGHT_MODE" => "light mode",
         "DARK_MODE" => "dark mode",
         "CHANGE_MOD_BUTTON" => "CHANGE",
@@ -154,6 +154,15 @@ $languages = [
         "PROFILE_USERNAME" => "USERNAME:",
         "PROFILE_PASSWORD" => "PASSWORD:",
         "INFO_SECURE" => "YOUR INFORMATION SECURE",
+        "SHOW_GOOD_INFO" => "SHOW GOOD INFORMATION",
+        "SEND_GODD" => "SEND GOOD",
+        "CARD_GOOD_NAME" => "NAME: ",
+        "CARD_GOOD_LOCATION" => "LOCATION: ",
+        "CARD_GOOD_PRICE" => "PRICE: ",
+        "CARD_GOOD_QUANTITY" => "QUANTITY: ",
+        "CARD_GOOD_EXPORTER" => "EXPORTER: ",
+        "CARD_BRANCH_NAME" => "BRANCH NAME: ",
+        "CARD_BRANCH_LOCATION" => "LOCATION: "
     ],
     "ar" => [
         "DASHBOARD" => "لوحة التحكم",
@@ -227,6 +236,13 @@ $languages = [
         "PROFILE_USERNAME" => "اسم المستخدم:",
         "PROFILE_PASSWORD" => "كلمة المرور:",
         "INFO_SECURE" => "معلوماتك هنا بامان",
+        "SHOW_GOOD_INFO" => "عرض معلومات البضاعة",
+        "SEND_GODD" => "تسليم بضاعة للفرع",
+        "CARD_GOOD_NAME" => "اسم البضاعة: ",
+        "CARD_GOOD_LOCATION" => "المكان يقع في: ",
+        "CARD_GOOD_PRICE" => "السعر: ",
+        "CARD_GOOD_QUANTITY" => "الكمية: ",
+        "CARD_GOOD_EXPORTER" => "المصدر: ",
     ],
 ];
 $en = $languages["en"];
@@ -398,7 +414,6 @@ if ($_SESSION['language'] == 'en') {
         html [dir="ltr"] .silder-nav button img {
             margin-right: 0.5rem;
         }
-
         .button-slider {
             display: none;
         }
@@ -1023,13 +1038,51 @@ if ($_SESSION['language'] == 'en') {
                         <div class="card" style="width: 18rem;">
                             <img src="<?php echo '../' . $row_four_goods['image']; ?>" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title">الاسم: <?php echo $row_four_goods['name']; ?></h5>
-                                <p class="card-text">المكان: <?php echo $row_four_goods['place']; ?></p>
-                                <p class="card-text">السعر: $<?php echo $row_four_goods['price']; ?></p>
-                                <p class="card-text">الكمية: <?php echo $row_four_goods['quantity']; ?></p>
-                                <p class="card-text">المصدر: <?php echo $good['exporter']; ?></p>
+                                <h5 class="card-title"> <?php
+                        if ($_SESSION['language'] == 'en') {
+                            echo $en['CARD_GOOD_NAME'];
+                        } else {
+                            echo $ar['SHOW_GOOD_INFO'];
+                        }
+                        ?> <?php echo $row_four_goods['name']; ?></h5>
+                                <p class="card-text"><?php
+                        if ($_SESSION['language'] == 'en') {
+                            echo $en['CARD_GOOD_LOCATION'];
+                        } else {
+                            echo $ar['CARD_GOOD_LOCATION'];
+                        }
+                        ?> <?php echo $row_four_goods['place']; ?></p>
+                                <p class="card-text"><?php
+                        if ($_SESSION['language'] == 'en') {
+                            echo $en['CARD_GOOD_PRICE'];
+                        } else {
+                            echo $ar['CARD_GOOD_PRICE'];
+                        }
+                        ?> $<?php echo $row_four_goods['price']; ?></p>
+                                <p class="card-text"><?php
+                        if ($_SESSION['language'] == 'en') {
+                            echo $en['CARD_GOOD_QUANTITY'];
+                        } else {
+                            echo $ar['CARD_GOOD_QUANTITY'];
+                        }
+                        ?> <?php echo $row_four_goods['quantity']; ?></p>
+                                <p class="card-text"><?php
+                        if ($_SESSION['language'] == 'en') {
+                            echo $en['CARD_GOOD_EXPORTER'];
+                        } else {
+                            echo $ar['CARD_GOOD_EXPORTER'];
+                        }
+                        ?> <?php echo $row_four_goods['exporter']; ?></p>
                                 <a href="<?php echo htmlspecialchars("/company/navigationsgoods/Informationgood/informationgood.php?good_id=" . $row_four_goods['id']); ?>"
-                                    class="btn btn-primary">عرض معلومات البضاعة</a>
+                                    class="btn btn-primary">
+                                    <?php
+                        if ($_SESSION['language'] == 'en') {
+                            echo $en['SHOW_GOOD_INFO'];
+                        } else {
+                            echo $ar['SHOW_GOOD_INFO'];
+                        }
+                        ?>
+                                </a>
                             </div>
                         </div>
                     <?php
@@ -1062,9 +1115,28 @@ if ($_SESSION['language'] == 'en') {
                         <div class="card" style="width: 18rem;">
                             <img src="<?php echo '../' . $row_four_branches['image']; ?>" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title">اسم الفرع: <?php echo $row_four_branches['name']; ?></h5>
-                                <p class="card-text">مكان الفرع يقع في: <?php echo $row_four_branches['place']; ?></p>
-                                <a href="<?php echo htmlspecialchars("/company/navigationsgoods/deliver/deliver.php?branch_id=" . $row_four_branches['id']) ?>" class="btn btn-primary">تسليم بضاعة للفرع</a>
+                                <h5 class="card-title">    <?php
+                        if ($_SESSION['language'] == 'en') {
+                            echo $en['CARD_BRANCH_NAME'];
+                        } else {
+                            echo $ar['CARD_BRANCH_NAME'];
+                        }
+                        ?> <?php echo $row_four_branches['name']; ?></h5>
+                                <p class="card-text"><?php
+                        if ($_SESSION['language'] == 'en') {
+                            echo $en['CARD_BRANCH_LOCATION'];
+                        } else {
+                            echo $ar['CARD_BRANCH_LOCATION'];
+                        }
+                        ?>
+                        <?php echo $row_four_branches['place']; ?></p>
+                                <a href="<?php echo htmlspecialchars("/company/navigationsgoods/deliver/deliver.php?branch_id=" . $row_four_branches['id']) ?>" class="btn btn-primary">          <?php
+                        if ($_SESSION['language'] == 'en') {
+                            echo $en['SEND_GODD'];
+                        } else {
+                            echo $ar['SEND_GODD'];
+                        }
+                        ?></a>
                             </div>
                         </div>
                     <?php endwhile; ?>
