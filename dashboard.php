@@ -778,7 +778,7 @@ if ($_SESSION['language'] == 'en') {
                     }
                     ?>
                 </h1>
-                <div class="table mt-3">
+                <div class="table-responsive mt-3">
                     <table class="table <?php echo ($_SESSION['mode'] == 'dark') ? 'table-dark' : 'table-white'; ?> table-bordered table-hover text-center">
                         <thead>
                             <tr>
@@ -845,7 +845,6 @@ if ($_SESSION['language'] == 'en') {
                                     echo "</tr>";
                                 }
                             } else {
-
                                 if ($_SESSION['language'] == 'en') {
                                     echo "<tr><td colspan='6'>" . $en['NO_DATA'] . "</td></tr>";
                                 } else {
@@ -856,6 +855,7 @@ if ($_SESSION['language'] == 'en') {
                         </tbody>
                     </table>
                 </div>
+
             </div>
             <!-- End Table Goods -->
         </div>
@@ -1307,7 +1307,7 @@ if ($_SESSION['language'] == 'en') {
                     }
                     ?>
                 </h1>
-                <div class="table mt-3">
+                <div class="table-responsive mt-3">
                     <table class="table <?php echo ($_SESSION['mode'] == 'dark') ? 'table-dark' : 'table-white'; ?>  table-bordered table-hover text-center">
                         <thead>
                             <tr>
